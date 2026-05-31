@@ -1,5 +1,5 @@
-BUENO;true;Uno
+BUENO;false;Uno
 NUEVO;true;Uno
-BUENO;true;Ajedrez
+BUENO;false;Ajedrez
 NUEVO;true;Twister
 BUENO;true;Catan

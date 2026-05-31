@@ -26,20 +26,26 @@ public class VentanaLogin extends JFrame {
         gbc.insets = new Insets(6, 8, 6, 8);
         gbc.fill = GridBagConstraints.HORIZONTAL;
 
-        gbc.gridx = 0; gbc.gridy = 0;
+        gbc.gridx = 0; 
+        gbc.gridy = 0;
         panel.add(new JLabel("Usuario:"), gbc);
+
         gbc.gridx = 1;
         txtLogin = new JTextField(16);
         panel.add(txtLogin, gbc);
 
-        gbc.gridx = 0; gbc.gridy = 1;
+        gbc.gridx = 0; 
+        gbc.gridy = 1;
         panel.add(new JLabel("Contraseña:"), gbc);
+
         gbc.gridx = 1;
         txtPassword = new JPasswordField(16);
         panel.add(txtPassword, gbc);
 
         JButton btnIngresar = new JButton("Ingresar");
-        gbc.gridx = 0; gbc.gridy = 2; gbc.gridwidth = 2;
+        gbc.gridx = 0; 
+        gbc.gridy = 2; 
+        gbc.gridwidth = 2;
         panel.add(btnIngresar, gbc);
 
         btnIngresar.addActionListener(e -> autenticar());
@@ -70,14 +76,13 @@ public class VentanaLogin extends JFrame {
 
     private void redirigir(Usuario usuario) {
         dispose();
+
         if (usuario instanceof Administrador) {
             new VentanaAdministrador(sistema, (Administrador) usuario).setVisible(true);
         } else if (usuario instanceof Empleado) {
-            JOptionPane.showMessageDialog(null, "Bienvenido empleado: " + usuario.getNombre());
-            // TODO: VentanaEmpleado
+            new VentanaEmpleado(sistema, (Empleado) usuario).setVisible(true);
         } else if (usuario instanceof Cliente) {
-            JOptionPane.showMessageDialog(null, "Bienvenido cliente: " + usuario.getNombre());
-            // TODO: VentanaCliente
+            new VentanaCliente(sistema, (Cliente) usuario).setVisible(true);
         }
     }
 }

@@ -3,9 +3,6 @@ package modelo;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import modelo.InscripcionTorneo;
-import modelo.Torneo;
-import modelo.DiaSemana;
 
 import persistencia.PersistenciaSistema;
 
@@ -23,7 +20,7 @@ public class SistemasDulcesDados
         this.usuarios = new ArrayList<Usuario>();
         this.persistencia = persistencia;
         this.sesionActual = null;
-        this.sugerencias = new ArrayList<>();
+        this.sugerencias = new ArrayList<SugerenciaPlatillo>();
     }
 
     public void inicializarSistema()
@@ -42,11 +39,7 @@ public class SistemasDulcesDados
 
         List<Usuario> usuariosCargados = persistencia.cargarUsuarios();
         Cafe cafeCargado = persistencia.cargarCafe();
-        List<SugerenciaPlatillo> sugsGuardadas = persistencia.cargarSugerencias();
-
-        if (sugsGuardadas != null) {
-            this.sugerencias = sugsGuardadas;
-        }
+        List<SugerenciaPlatillo> sugerenciasCargadas = persistencia.cargarSugerencias();
 
         if (usuariosCargados != null)
         {
@@ -62,10 +55,23 @@ public class SistemasDulcesDados
             cafe = cafeCargado;
         }
 
-        List<Torneo> torneosCargados = persistencia.cargarTorneos(cafe, usuarios);
-        if (torneosCargados != null)
+        if (sugerenciasCargadas != null)
         {
-            cafe.setTorneos(torneosCargados);
+            sugerencias = sugerenciasCargadas;
+        }
+        else
+        {
+            sugerencias = new ArrayList<SugerenciaPlatillo>();
+        }
+
+        if (cafe != null)
+        {
+            List<Torneo> torneosCargados = persistencia.cargarTorneos(cafe, usuarios);
+
+            if (torneosCargados != null)
+            {
+                cafe.setTorneos(torneosCargados);
+            }
         }
 
         asegurarEstructuraMinima();
@@ -75,10 +81,25 @@ public class SistemasDulcesDados
     {
         if (persistencia != null)
         {
-            persistencia.guardarUsuarios(usuarios);
-            persistencia.guardarCafe(cafe);
-            persistencia.guardarTorneos(cafe.getTorneos());
+            if (usuarios != null)
+            {
+                persistencia.guardarUsuarios(usuarios);
+            }
 
+            if (cafe != null)
+            {
+                persistencia.guardarCafe(cafe);
+
+                if (cafe.getTorneos() != null)
+                {
+                    persistencia.guardarTorneos(cafe.getTorneos());
+                }
+            }
+
+            if (sugerencias != null)
+            {
+                persistencia.guardarSugerencias(sugerencias);
+            }
         }
     }
 
@@ -92,6 +113,16 @@ public class SistemasDulcesDados
         if (usuarios == null)
         {
             usuarios = new ArrayList<Usuario>();
+        }
+
+        if (sugerencias == null)
+        {
+            sugerencias = new ArrayList<SugerenciaPlatillo>();
+        }
+
+        if (cafe.getTorneos() == null)
+        {
+            cafe.setTorneos(new ArrayList<Torneo>());
         }
     }
 
@@ -137,6 +168,7 @@ public class SistemasDulcesDados
                 return usuario;
             }
         }
+
         return null;
     }
 
@@ -158,6 +190,8 @@ public class SistemasDulcesDados
         }
 
         usuarios.add(usuario);
+        guardarDatos();
+
         return true;
     }
 
@@ -175,7 +209,14 @@ public class SistemasDulcesDados
             sesionActual = null;
         }
 
-        return usuarios.remove(usuario);
+        boolean eliminado = usuarios.remove(usuario);
+
+        if (eliminado)
+        {
+            guardarDatos();
+        }
+
+        return eliminado;
     }
 
     public Cafe obtenerCafe()
@@ -193,6 +234,7 @@ public class SistemasDulcesDados
         if (cafe != null)
         {
             this.cafe = cafe;
+            guardarDatos();
         }
     }
 
@@ -211,6 +253,8 @@ public class SistemasDulcesDados
         {
             this.usuarios = new ArrayList<Usuario>();
         }
+
+        guardarDatos();
     }
 
     public PersistenciaSistema getPersistencia()
@@ -232,46 +276,74 @@ public class SistemasDulcesDados
     {
         this.sesionActual = sesionActual;
     }
-    public void agregarSugerencia(SugerenciaPlatillo sugerencia) {
-        if (sugerencia != null) {
+
+    public void agregarSugerencia(SugerenciaPlatillo sugerencia)
+    {
+        if (sugerencia != null)
+        {
             sugerencias.add(sugerencia);
+            guardarDatos();
         }
     }
 
-    public List<SugerenciaPlatillo> getSugerencias() {
+    public List<SugerenciaPlatillo> getSugerencias()
+    {
         return sugerencias;
     }
- // ── Torneos ───────────────────────────────────────────────────────────
 
-    public Torneo crearTorneoAmistoso(String nombre, DiaSemana dia,
-                                      JuegoMesa juego, int cupos, double bono)
-    {
-        if (!(sesionActual instanceof Administrador))
-        {
-            return null; // solo el administrador puede crear torneos
-        }
-        Administrador admin = (Administrador) sesionActual;
-        return admin.crearTorneoAmistoso(nombre, dia, juego, cupos, bono, cafe);
-    }
-
-    public Torneo crearTorneoCompetitivo(String nombre, DiaSemana dia,
-                                         JuegoMesa juego, int cupos, double tarifa)
+    public Torneo crearTorneoAmistoso(String nombre, DiaSemana dia, JuegoMesa juego, int cupos, double bono)
     {
         if (!(sesionActual instanceof Administrador))
         {
             return null;
         }
+
         Administrador admin = (Administrador) sesionActual;
-        return admin.crearTorneoCompetitivo(nombre, dia, juego, cupos, tarifa, cafe);
+        Torneo torneo = admin.crearTorneoAmistoso(nombre, dia, juego, cupos, bono, cafe);
+
+        if (torneo != null)
+        {
+            guardarDatos();
+        }
+
+        return torneo;
+    }
+
+    public Torneo crearTorneoCompetitivo(String nombre, DiaSemana dia, JuegoMesa juego, int cupos, double tarifa)
+    {
+        if (!(sesionActual instanceof Administrador))
+        {
+            return null;
+        }
+
+        Administrador admin = (Administrador) sesionActual;
+        Torneo torneo = admin.crearTorneoCompetitivo(nombre, dia, juego, cupos, tarifa, cafe);
+
+        if (torneo != null)
+        {
+            guardarDatos();
+        }
+
+        return torneo;
     }
 
     public List<Torneo> consultarTorneos()
     {
+        if (cafe == null || cafe.getTorneos() == null)
+        {
+            return new ArrayList<Torneo>();
+        }
+
         return cafe.getTorneos();
     }
 
     public List<Torneo> consultarTorneosDisponibles()
     {
+        if (cafe == null)
+        {
+            return new ArrayList<Torneo>();
+        }
+
         return cafe.consultarTorneosDisponibles();
     }
 
@@ -281,7 +353,15 @@ public class SistemasDulcesDados
         {
             return null;
         }
-        return torneo.inscribir(sesionActual, numeroCupos);
+
+        InscripcionTorneo inscripcion = torneo.inscribir(sesionActual, numeroCupos);
+
+        if (inscripcion != null)
+        {
+            guardarDatos();
+        }
+
+        return inscripcion;
     }
 
     public boolean desinscribirDeTorneo(Torneo torneo)
@@ -290,22 +370,38 @@ public class SistemasDulcesDados
         {
             return false;
         }
-        return torneo.desinscribir(sesionActual);
+
+        boolean desinscrito = torneo.desinscribir(sesionActual);
+
+        if (desinscrito)
+        {
+            guardarDatos();
+        }
+
+        return desinscrito;
     }
 
     public boolean aplicarBonoATorneo(Venta venta)
     {
+        boolean aplicado = false;
+
         if (sesionActual instanceof Cliente)
         {
-            return ((Cliente) sesionActual).aplicarBonoAVenta(venta);
+            aplicado = ((Cliente) sesionActual).aplicarBonoAVenta(venta);
         }
-        if (sesionActual instanceof Empleado)
+        else if (sesionActual instanceof Empleado)
         {
-            return ((Empleado) sesionActual).aplicarBonoAVenta(venta);
+            aplicado = ((Empleado) sesionActual).aplicarBonoAVenta(venta);
         }
-        return false;
+
+        if (aplicado)
+        {
+            guardarDatos();
+        }
+
+        return aplicado;
     }
-    
+
     public boolean registrarCliente(
             String documentoIdentidad,
             String nombre,
@@ -335,12 +431,12 @@ public class SistemasDulcesDados
 
         return true;
     }
-    
+
     public Usuario iniciarSesion(String login, String password)
     {
         return autenticarUsuario(login, password);
     }
-    
+
     public boolean validarCredenciales(String login, String password)
     {
         Usuario usuario = buscarUsuarioPorLogin(login);
@@ -352,7 +448,7 @@ public class SistemasDulcesDados
 
         return usuario.validarPassword(password);
     }
-    
+
     public boolean registrarEmpleadoPorAdministrador(
             String documentoIdentidad,
             String nombre,
@@ -367,14 +463,15 @@ public class SistemasDulcesDados
             return false;
         }
 
-        if (documentoIdentidad == null || nombre == null || correoElectronico == null 
-            || login == null || password == null || codigoEmpleado == null || cargo == null)
+        if (documentoIdentidad == null || nombre == null || correoElectronico == null
+                || login == null || password == null || codigoEmpleado == null || cargo == null)
         {
             return false;
         }
 
-        if (documentoIdentidad.length() == 0 || nombre.length() == 0 || correoElectronico.length() == 0
-                || login.length() == 0 || password.length() == 0 || codigoEmpleado.length() == 0 || cargo.length() == 0)
+        if (documentoIdentidad.trim().isEmpty() || nombre.trim().isEmpty() || correoElectronico.trim().isEmpty()
+                || login.trim().isEmpty() || password.trim().isEmpty()
+                || codigoEmpleado.trim().isEmpty() || cargo.trim().isEmpty())
         {
             return false;
         }
@@ -400,19 +497,48 @@ public class SistemasDulcesDados
         }
 
         usuarios.add(empleado);
+
+        if (cafe != null)
+        {
+            cafe.agregarEmpleado(empleado);
+        }
+
         guardarDatos();
 
         return true;
     }
-    public List<Venta> getVentasPorRangoFechas(LocalDate inicio, LocalDate fin) {
-        List<Venta> resultado = new ArrayList<>();
-        for (Venta v : cafe.getVentas()) {
-            if (v.getFechaHora() == null || v.getFechaHora().length() < 10) continue;
-            try {
-                LocalDate fecha = LocalDate.parse(v.getFechaHora().substring(0, 10));
-                if (!fecha.isBefore(inicio) && !fecha.isAfter(fin)) resultado.add(v);
-            } catch (Exception ignored) {}
+
+    public List<Venta> getVentasPorRangoFechas(LocalDate inicio, LocalDate fin)
+    {
+        List<Venta> resultado = new ArrayList<Venta>();
+
+        if (cafe == null || cafe.getVentas() == null || inicio == null || fin == null)
+        {
+            return resultado;
         }
+
+        for (Venta venta : cafe.getVentas())
+        {
+            if (venta.getFechaHora() == null || venta.getFechaHora().length() < 10)
+            {
+                continue;
+            }
+
+            try
+            {
+                LocalDate fecha = LocalDate.parse(venta.getFechaHora().substring(0, 10));
+
+                if (!fecha.isBefore(inicio) && !fecha.isAfter(fin))
+                {
+                    resultado.add(venta);
+                }
+            }
+            catch (Exception e)
+            {
+                // Si una fecha está mal escrita en el archivo, se ignora esa venta.
+            }
+        }
+
         return resultado;
     }
 }
