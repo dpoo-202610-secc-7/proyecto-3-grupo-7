@@ -29,7 +29,7 @@ public class VentanaAdministrador extends JFrame {
     private void initUI() {
         JTabbedPane tabs = new JTabbedPane();
         tabs.addTab("Usuarios", new PanelUsuarios(sistema));
-        tabs.addTab("Inventario",  new JLabel("Panel Inventario — próximamente"));
+        tabs.addTab("Inventario", new PanelInventario(sistema));;
         tabs.addTab("Turnos",      new JLabel("Panel Turnos — próximamente"));
         tabs.addTab("Ventas",      new JLabel("Panel Ventas — próximamente"));
         tabs.addTab("Sugerencias", new JLabel("Panel Sugerencias — próximamente"));
