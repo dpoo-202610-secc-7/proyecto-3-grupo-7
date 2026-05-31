@@ -12,6 +12,8 @@ public class AplicacionPrincipal {
                 new Cafe(50), new PersistenciaSistema("src/datos"));
             sistema.inicializarSistema();
             
+            
+            	
             VentanaLogin login = new VentanaLogin(sistema);
             login.setVisible(true);
         });

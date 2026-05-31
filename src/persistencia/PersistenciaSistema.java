@@ -129,6 +129,7 @@ public class PersistenciaSistema {
     // ═══════════════════════════════════════════════════════════════════
 
     private void cargarTodo() {
+    	
         if (cargado) return;
 
         usuariosCacheados   = new ArrayList<Usuario>();
@@ -163,28 +164,57 @@ public class PersistenciaSistema {
 
     private void leerUsuariosBasico() {
         File archivo = path("usuarios.txt");
+
+
         if (!archivo.exists()) return;
 
         try (BufferedReader br = abrir(archivo)) {
             String linea;
+
             while ((linea = br.readLine()) != null) {
                 linea = linea.trim();
+
                 if (linea.isEmpty()) continue;
+
+    
+
                 String[] p = linea.split(";", -1);
 
                 if ("CLIENTE".equals(p[0]) && p.length >= 7) {
                     Cliente c = new Cliente(p[1], p[2], p[3], p[4], p[5]);
                     c.setPuntosFidelidad(Integer.parseInt(p[6]));
                     usuariosCacheados.add(c);
+
+         
+
                 } else if ("MESERO".equals(p[0]) && p.length >= 7) {
-                    usuariosCacheados.add(new Mesero(p[1], p[2], p[3], p[4], p[5], p[6]));
+
+                    Mesero m = new Mesero(p[1], p[2], p[3], p[4], p[5], p[6]);
+                    usuariosCacheados.add(m);
+
+ 
+
                 } else if ("COCINERO".equals(p[0]) && p.length >= 7) {
-                    usuariosCacheados.add(new Cocinero(p[1], p[2], p[3], p[4], p[5], p[6]));
+
+                    Cocinero c = new Cocinero(p[1], p[2], p[3], p[4], p[5], p[6]);
+                    usuariosCacheados.add(c);
+
+        
+
                 } else if ("ADMIN".equals(p[0]) && p.length >= 6) {
-                    usuariosCacheados.add(new Administrador(p[1], p[2], p[3], p[4], p[5]));
+
+                    Administrador a = new Administrador(p[1], p[2], p[3], p[4], p[5]);
+                    usuariosCacheados.add(a);
+
+                    
                 }
             }
-        } catch (IOException e) { e.printStackTrace(); }
+
+   
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private Cafe leerCafeBasico() {
@@ -213,6 +243,7 @@ public class PersistenciaSistema {
         try (BufferedReader br = abrir(archivo)) {
             String linea;
             while ((linea = br.readLine()) != null) {
+          
                 linea = linea.trim();
                 if (linea.isEmpty()) continue;
                 Usuario u = usuarioPorLogin(linea);
@@ -534,63 +565,110 @@ public class PersistenciaSistema {
         } catch (IOException e) { e.printStackTrace(); }
     }
 
-    private void leerVentas() {
+    private void leerVentas()
+    {
         File archivoVentas = path("ventas.txt");
-        if (!archivoVentas.exists()) return;
+        if (!archivoVentas.exists())
+        {
+            return;
+        }
 
         List<Venta> indiceVentas = new ArrayList<Venta>();
 
-        try (BufferedReader br = abrir(archivoVentas)) {
+        try (BufferedReader br = abrir(archivoVentas))
+        {
             String linea;
-            while ((linea = br.readLine()) != null) {
+            while ((linea = br.readLine()) != null)
+            {
                 linea = linea.trim();
-                if (linea.isEmpty()) continue;
-                // formato: fechaHora;tipoVenta;descuento;propina;loginComprador;loginMesero
+                if (linea.isEmpty())
+                {
+                    continue;
+                }
+
                 String[] p = linea.split(";", -1);
-                if (p.length >= 6) {
+                if (p.length >= 6)
+                {
+                    String fechaHora = fromNull(p[0]);
+                    TipoVenta tipoVenta = TipoVenta.valueOf(p[1]);
+                    double descuento = Double.parseDouble(p[2]);
+                    double propina = Double.parseDouble(p[3]);
                     Usuario comprador = usuarioPorLogin(p[4]);
+
                     Mesero mesero = null;
-                    if (!"NULL".equals(p[5])) {
-                        Usuario um = usuarioPorLogin(p[5]);
-                        if (um instanceof Mesero) mesero = (Mesero) um;
+                    if (!"NULL".equals(p[5]))
+                    {
+                        Usuario u = usuarioPorLogin(p[5]);
+                        if (u instanceof Mesero)
+                        {
+                            mesero = (Mesero) u;
+                        }
                     }
-                    Venta v = new Venta(
-                        fromNull(p[0]), TipoVenta.valueOf(p[1]),
-                        Double.parseDouble(p[2]), Double.parseDouble(p[3]),
-                        comprador, mesero
-                    );
-                    indiceVentas.add(v);
-                    cafeCacheado.registrarVenta(v);
+
+                    Venta venta = new Venta(fechaHora, tipoVenta, descuento, propina, comprador, mesero);
+                    indiceVentas.add(venta);
+                    cafeCacheado.registrarVenta(venta);
                 }
             }
-        } catch (IOException e) { e.printStackTrace(); }
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
 
         File archivoItems = path("items_venta.txt");
-        if (!archivoItems.exists()) return;
+        if (!archivoItems.exists())
+        {
+            return;
+        }
 
-        try (BufferedReader br = abrir(archivoItems)) {
+        try (BufferedReader br = abrir(archivoItems))
+        {
             String linea;
-            while ((linea = br.readLine()) != null) {
+            while ((linea = br.readLine()) != null)
+            {
                 linea = linea.trim();
-                if (linea.isEmpty()) continue;
-                // formato: indiceVenta;cantidad;precio;nombreProducto;tipoProducto
+                if (linea.isEmpty())
+                {
+                    continue;
+                }
+
                 String[] p = linea.split(";", -1);
-                if (p.length >= 5) {
-                    int idxV = Integer.parseInt(p[0]);
-                    if (idxV >= indiceVentas.size()) continue;
+                if (p.length >= 5)
+                {
+                    int indiceVenta = Integer.parseInt(p[0]);
+                    int cantidad = Integer.parseInt(p[1]);
+                    double precio = Double.parseDouble(p[2]);
+                    String nombreProducto = p[3];
+                    String tipoProducto = p[4];
 
-                    ProductoVendible prod = null;
-                    if ("MENU".equals(p[4]))         prod = productoMenuPorNombre(p[3]);
-                    else if ("JUEGO_VENTA".equals(p[4])) prod = juegoVentaPorNombre(p[3]);
+                    if (indiceVenta < indiceVentas.size())
+                    {
+                        ProductoVendible producto = null;
 
-                    if (prod != null) {
-                        ItemVenta item = new ItemVenta(Integer.parseInt(p[1]), Double.parseDouble(p[2]), prod);
-                        item.setPrecioUnitario(Double.parseDouble(p[2]));
-                        indiceVentas.get(idxV).agregarItem(item);
+                        if ("MENU".equals(tipoProducto))
+                        {
+                            producto = productoMenuPorNombre(nombreProducto);
+                        }
+                        else if ("JUEGO_VENTA".equals(tipoProducto))
+                        {
+                            producto = juegoVentaPorNombre(nombreProducto);
+                        }
+
+                        if (producto != null)
+                        {
+                            ItemVenta item = new ItemVenta(cantidad, precio, producto);
+                            item.setPrecioUnitario(precio);
+                            indiceVentas.get(indiceVenta).agregarItem(item);
+                        }
                     }
                 }
             }
-        } catch (IOException e) { e.printStackTrace(); }
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
     }
 
     // ═══════════════════════════════════════════════════════════════════

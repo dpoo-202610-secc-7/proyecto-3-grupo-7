@@ -30,8 +30,8 @@ public class VentanaAdministrador extends JFrame {
         JTabbedPane tabs = new JTabbedPane();
         tabs.addTab("Usuarios", new PanelUsuarios(sistema));
         tabs.addTab("Inventario", new PanelInventario(sistema));;
-        tabs.addTab("Turnos",      new JLabel("Panel Turnos — próximamente"));
-        tabs.addTab("Ventas",      new JLabel("Panel Ventas — próximamente"));
+        tabs.addTab("Turnos", new PanelTurnos(sistema));;
+        tabs.addTab("Ventas", new PanelVentasAdmin(sistema));;
         tabs.addTab("Sugerencias", new JLabel("Panel Sugerencias — próximamente"));
         add(tabs, BorderLayout.CENTER);
     }
