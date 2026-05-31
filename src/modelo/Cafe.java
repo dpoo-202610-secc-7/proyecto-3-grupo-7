@@ -354,4 +354,9 @@ public class Cafe {
         }
         return null;
     }
+    public List<ReservaMesa> getAllReservas() {
+        List<ReservaMesa> todas = new ArrayList<>();
+        for (Mesa m : mesas) todas.addAll(m.getReservas());
+        return todas;
+    }
 }

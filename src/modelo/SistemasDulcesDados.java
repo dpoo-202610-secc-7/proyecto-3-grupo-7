@@ -1,5 +1,6 @@
 package modelo;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import modelo.InscripcionTorneo;
@@ -402,5 +403,16 @@ public class SistemasDulcesDados
         guardarDatos();
 
         return true;
+    }
+    public List<Venta> getVentasPorRangoFechas(LocalDate inicio, LocalDate fin) {
+        List<Venta> resultado = new ArrayList<>();
+        for (Venta v : cafe.getVentas()) {
+            if (v.getFechaHora() == null || v.getFechaHora().length() < 10) continue;
+            try {
+                LocalDate fecha = LocalDate.parse(v.getFechaHora().substring(0, 10));
+                if (!fecha.isBefore(inicio) && !fecha.isAfter(fin)) resultado.add(v);
+            } catch (Exception ignored) {}
+        }
+        return resultado;
     }
 }
