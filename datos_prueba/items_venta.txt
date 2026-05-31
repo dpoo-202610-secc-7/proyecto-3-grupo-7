@@ -1,0 +1,9 @@
+0;2;12000;Capuccino;MENU
+0;1;10000;Brownie;MENU
+
+1;1;90000;Catan;JUEGO_VENTA
+
+2;1;14000;Latte;MENU
+2;1;15000;Cheesecake;MENU
+
+3;1;85000;Carcassonne;JUEGO_VENTA

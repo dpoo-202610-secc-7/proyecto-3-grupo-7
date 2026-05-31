@@ -1,0 +1,4 @@
+2026-05-20T18:00;4;false;false;CONFIRMADA;daniel;1
+2026-05-21T19:00;2;false;false;CONFIRMADA;daniel;2
+2026-05-22T17:30;5;true;true;PENDIENTE;daniel;1
+2026-05-23T20:00;3;false;true;CONFIRMADA;daniel;2

@@ -1,0 +1,4 @@
+BEBIDA;Capuccino;12000;true;false;true
+BEBIDA;Latte;14000;true;false;true
+PASTELERIA;Brownie;10000;true;
+PASTELERIA;Cheesecake;15000;true;
