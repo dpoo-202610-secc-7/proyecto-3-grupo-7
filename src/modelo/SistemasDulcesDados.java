@@ -541,4 +541,9 @@ public class SistemasDulcesDados
 
         return resultado;
     }
+    
+    public List<Venta> getVentasPorRango(LocalDate inicio, LocalDate fin)
+    {
+        return getVentasPorRangoFechas(inicio, fin);
+    }
 }
