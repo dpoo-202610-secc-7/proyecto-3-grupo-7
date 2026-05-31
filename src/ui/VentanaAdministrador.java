@@ -32,7 +32,7 @@ public class VentanaAdministrador extends JFrame {
         tabs.addTab("Inventario", new PanelInventario(sistema));;
         tabs.addTab("Turnos", new PanelTurnos(sistema));;
         tabs.addTab("Ventas", new PanelVentasAdmin(sistema));;
-        tabs.addTab("Sugerencias", new JLabel("Panel Sugerencias — próximamente"));
+        tabs.addTab("Sugerencias", new PanelSugerencias(sistema, admin));;
         add(tabs, BorderLayout.CENTER);
     }
 }
