@@ -8,3 +8,4 @@ carlos;Latte Avellana;BEBIDA;2026-05-31 09:20;RECHAZADA;admin
 carlos;Brownie Triple Chocolate;PASTELERIA;2026-05-31 10:30;APROBADA;admin
 carlos;Frappuccino Caramelo;BEBIDA;2026-05-31 11:40;PENDIENTE;NULL
 carlos;Galletas Artesanales;PASTELERIA;2026-05-31 12:50;APROBADA;admin
+vale;Milo Frio;BEBIDA;2026-05-31 11:03;APROBADA;admin
