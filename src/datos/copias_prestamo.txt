@@ -2,4 +2,59 @@ BUENO;false;Uno
 NUEVO;true;Uno
 BUENO;false;Ajedrez
 NUEVO;true;Twister
+BUENO;true;Twister
+BUENO;true;Twister
+NUEVO;true;Twister
 BUENO;true;Catan
+BUENO;true;Catan
+BUENO;true;Catan
+NUEVO;true;Catan
+BUENO;true;Carcassonne
+BUENO;true;Carcassonne
+NUEVO;true;Carcassonne
+BUENO;true;Ticket to Ride
+BUENO;true;Ticket to Ride
+NUEVO;true;Ticket to Ride
+BUENO;true;Pandemic
+BUENO;true;Pandemic
+BUENO;true;Dixit
+BUENO;true;Dixit
+NUEVO;true;Dixit
+BUENO;true;Coup
+BUENO;true;Coup
+NUEVO;true;Coup
+BUENO;true;Dominion
+BUENO;true;Dominion
+BUENO;true;Hanabi
+BUENO;true;Hanabi
+NUEVO;true;Hanabi
+BUENO;true;Codenames
+BUENO;true;Codenames
+NUEVO;true;Codenames
+BUENO;true;Love Letter
+BUENO;true;Love Letter
+NUEVO;true;Love Letter
+BUENO;true;Jenga
+BUENO;true;Jenga
+NUEVO;true;Jenga
+BUENO;true;Kerplunk
+BUENO;true;Kerplunk
+NUEVO;true;Kerplunk
+BUENO;true;Uno Stacko
+BUENO;true;Uno Stacko
+NUEVO;true;Uno Stacko
+BUENO;true;Dobble
+BUENO;true;Dobble
+NUEVO;true;Dobble
+BUENO;true;7 Wonders
+BUENO;true;7 Wonders
+BUENO;true;Agricola
+BUENO;true;Agricola
+BUENO;true;Puerto Rico
+BUENO;true;Puerto Rico
+BUENO;true;Azul
+BUENO;true;Azul
+NUEVO;true;Azul
+BUENO;true;King of Tokyo
+BUENO;true;King of Tokyo
+NUEVO;true;King of Tokyo

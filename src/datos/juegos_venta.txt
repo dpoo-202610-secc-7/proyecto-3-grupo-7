@@ -1,3 +1,23 @@
 Uno;25000.0;true;15
 Catan;180000.0;true;12
 Twister;95000.0;true;8
+Catan;45000.0;true;8
+Carcassonne;38000.0;true;10
+Ticket to Ride;52000.0;true;6
+Pandemic;42000.0;true;5
+Dixit;35000.0;true;12
+Coup;22000.0;true;15
+Dominion;48000.0;true;4
+Hanabi;18000.0;true;20
+Codenames;32000.0;true;9
+Love Letter;15000.0;true;18
+Jenga;25000.0;true;11
+Twister;28000.0;true;7
+Dobble;30000.0;true;14
+7 Wonders;55000.0;true;3
+Agricola;65000.0;true;2
+Puerto Rico;58000.0;false;0
+Azul;40000.0;true;6
+King of Tokyo;38000.0;true;8
+Uno Stacko;20000.0;true;16
+Kerplunk;18000.0;true;13

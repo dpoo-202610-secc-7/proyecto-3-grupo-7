@@ -1,0 +1,67 @@
+Torneo Primavera;cliana1;1;true
+Torneo Primavera;clisebast14;1;true
+Torneo Primavera;clinatali21;1;true
+Torneo Primavera;clilucia27;1;true
+Torneo Primavera;clidaniel34;1;true
+Fiesta de Cartas;climaria3;1;true
+Fiesta de Cartas;clijuan10;1;true
+Fiesta de Cartas;clialejan17;1;true
+Fiesta de Cartas;clipaola23;1;true
+Fiesta de Cartas;climauric30;1;true
+Fiesta de Cartas;clisamuel36;1;true
+Fiesta de Cartas;clisofia37;1;true
+Fiesta de Cartas;clijoaqui50;1;true
+Tarde de Dixit;cliluis2;1;true
+Tarde de Dixit;clivalent9;1;true
+Tarde de Dixit;clicamila15;1;true
+Tarde de Dixit;climateo22;1;true
+Tarde de Dixit;clisara29;1;true
+Tarde de Dixit;cliisabel35;1;true
+Noche de Jenga;clicarlos4;1;true
+Noche de Jenga;cliisabel11;1;true
+Noche de Jenga;clialejan17;1;true
+Noche de Jenga;cliesteba24;1;true
+Noche de Jenga;climauric30;1;true
+Noche de Jenga;climarian31;1;true
+Noche de Jenga;clirodrig44;1;true
+Noche de Jenga;clirenata51;1;true
+Noche de Jenga;cliadrian57;1;true
+Noche de Jenga;clieduard64;1;true
+Cup Challenge;cliluis2;1;true
+Cup Challenge;clivalent9;1;true
+Cup Challenge;clicamila15;1;true
+Gran Premio Catan;cliana1;1;true
+Gran Premio Catan;clisebast14;1;true
+Gran Premio Catan;clinatali21;1;true
+Gran Premio Catan;clilucia27;1;true
+Gran Premio Catan;clidaniel34;1;true
+Gran Premio Catan;clivaleri41;1;true
+Campeonato Ticket;cliandres8;1;true
+Campeonato Ticket;clicamila15;1;true
+Campeonato Ticket;clinatali21;1;true
+Campeonato Ticket;cliandres28;1;true
+Campeonato Ticket;cliisabel35;1;true
+Campeonato Ticket;clivaleri41;1;true
+Liga Codenames;climaria3;1;true
+Liga Codenames;clijuan10;1;true
+Liga Codenames;clialejan17;1;true
+Liga Codenames;clipaola23;1;true
+Liga Codenames;climauric30;1;true
+Liga Codenames;clisamuel36;1;true
+Liga Codenames;clisofia37;1;true
+Liga Codenames;clijoaqui50;1;true
+Liga Codenames;cliadrian57;1;true
+Liga Codenames;clipatric63;1;true
+Liga Codenames;cliarturo70;1;true
+Torneo Azul;clipedro6;1;true
+Torneo Azul;clilaura7;1;true
+Torneo Azul;clidiego20;1;true
+Torneo Azul;clilucia27;1;true
+King of Tokyo Pro;clilaura7;1;true
+King of Tokyo Pro;clisebast14;1;true
+King of Tokyo Pro;clidiego20;1;true
+King of Tokyo Pro;clilucia27;1;true
+King of Tokyo Pro;clivalent33;1;true
+King of Tokyo Pro;clidaniel34;1;true
+King of Tokyo Pro;cliconsta47;1;true
+King of Tokyo Pro;clialbert54;1;true

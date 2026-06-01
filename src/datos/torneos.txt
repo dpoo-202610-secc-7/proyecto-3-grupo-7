@@ -1,0 +1,10 @@
+AMISTOSO;Torneo Primavera;SABADO;Catan;8;1;4;0.15
+AMISTOSO;Fiesta de Cartas;VIERNES;Codenames;12;2;6;0.1
+AMISTOSO;Tarde de Dixit;DOMINGO;Dixit;12;1;5;0.2
+AMISTOSO;Noche de Jenga;MIERCOLES;Jenga;16;2;8;0.15
+AMISTOSO;Cup Challenge;JUEVES;Coup;12;0;3;0.12
+COMPETITIVO;Gran Premio Catan;SABADO;Catan;8;1;5;10000.0
+COMPETITIVO;Campeonato Ticket;DOMINGO;Ticket to Ride;10;2;4;15000.0
+COMPETITIVO;Liga Codenames;LUNES;Codenames;16;3;8;8000.0
+COMPETITIVO;Torneo Azul;MARTES;Azul;8;0;4;12000.0
+COMPETITIVO;King of Tokyo Pro;VIERNES;King of Tokyo;12;1;7;9000.0

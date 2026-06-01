@@ -3,3 +3,43 @@ BEBIDA;Limonada;6000.0;true;false;false
 BEBIDA;Cerveza;12000.0;true;true;false
 PASTELERIA;Brownie;7000.0;true;GLUTEN,HUEVO
 PASTELERIA;Croissant;8000.0;true;GLUTEN
+BEBIDA;Cafe Americano;3500.0;true;false;true
+BEBIDA;Cappuccino;4200.0;true;false;true
+BEBIDA;Latte;4500.0;true;false;true
+BEBIDA;Te Verde;3000.0;true;false;true
+BEBIDA;Chocolate Caliente;4000.0;true;false;true
+BEBIDA;Agua con Gas;2000.0;true;false;false
+BEBIDA;Jugo de Naranja;3500.0;true;false;false
+BEBIDA;Limonada Natural;3200.0;true;false;false
+BEBIDA;Gaseosa Cola;2500.0;true;false;false
+BEBIDA;Cerveza Artesanal;6500.0;true;true;false
+BEBIDA;Vino Tinto Copa;8000.0;true;true;false
+BEBIDA;Vino Blanco Copa;8000.0;true;true;false
+BEBIDA;Sangria;7500.0;true;true;false
+BEBIDA;Mojito;9000.0;true;true;false
+BEBIDA;Agua Aromática;2800.0;true;false;true
+BEBIDA;Smoothie Tropical;5500.0;true;false;false
+BEBIDA;Kombucha;6000.0;true;false;false
+BEBIDA;Matcha Latte;5000.0;true;false;true
+BEBIDA;Espresso;3000.0;true;false;true
+BEBIDA;Tónica con Gin;10000.0;false;true;false
+PASTELERIA;Brownie de Chocolate;4500.0;true;GLUTEN,HUEVO
+PASTELERIA;Cheesecake Fresa;5500.0;true;LACTEOS,GLUTEN
+PASTELERIA;Croissant;3500.0;true;GLUTEN,LACTEOS
+PASTELERIA;Muffin Arándano;3800.0;true;GLUTEN,HUEVO
+PASTELERIA;Macarons;5000.0;true;GLUTEN,HUEVO
+PASTELERIA;Tarta de Manzana;4800.0;true;GLUTEN,HUEVO
+PASTELERIA;Galletas de Avena;2800.0;true;GLUTEN
+PASTELERIA;Tiramisú;6000.0;true;GLUTEN,LACTEOS,HUEVO
+PASTELERIA;Cinnamon Roll;4200.0;true;GLUTEN,LACTEOS
+PASTELERIA;Cupcake Vainilla;3500.0;true;GLUTEN,HUEVO,LACTEOS
+PASTELERIA;Alfajor;2500.0;true;GLUTEN,LACTEOS
+PASTELERIA;Medialuna;3000.0;true;GLUTEN,LACTEOS,HUEVO
+PASTELERIA;Waffles;5500.0;true;GLUTEN,LACTEOS,HUEVO
+PASTELERIA;Panettone;4000.0;false;GLUTEN,HUEVO
+PASTELERIA;Torta Tres Leches;5800.0;true;LACTEOS,HUEVO
+PASTELERIA;Bizcocho Limón;4100.0;true;GLUTEN,HUEVO
+PASTELERIA;Palito de Queso;2200.0;true;GLUTEN,LACTEOS
+PASTELERIA;Dona Glaseada;3200.0;true;GLUTEN,HUEVO,LACTEOS
+PASTELERIA;Tostada Francesa;4600.0;true;GLUTEN,HUEVO,LACTEOS
+PASTELERIA;Bizcocho Sin Gluten;4500.0;true;

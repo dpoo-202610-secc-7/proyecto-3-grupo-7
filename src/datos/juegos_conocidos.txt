@@ -1,2 +1,62 @@
 vale;Ajedrez
 vale;Catan
+mesero1;Catan
+mesero1;Carcassonne
+mesero1;Ticket to Ride
+mesero1;Pandemic
+mesero2;Dixit
+mesero2;Coup
+mesero2;Dominion
+mesero2;Hanabi
+mesero2;Codenames
+mesero3;Codenames
+mesero3;Love Letter
+mesero3;Jenga
+mesero3;Twister
+mesero3;Kerplunk
+mesero3;Uno Stacko
+mesero4;Kerplunk
+mesero4;Uno Stacko
+mesero4;Dobble
+mesero4;7 Wonders
+mesero4;Agricola
+mesero4;Puerto Rico
+mesero4;Azul
+mesero5;Agricola
+mesero5;Puerto Rico
+mesero5;Azul
+mesero5;King of Tokyo
+mesero5;Catan
+mesero5;Carcassonne
+mesero5;Ticket to Ride
+mesero5;Pandemic
+mesero6;Catan
+mesero6;Carcassonne
+mesero6;Ticket to Ride
+mesero6;Pandemic
+mesero7;Dixit
+mesero7;Coup
+mesero7;Dominion
+mesero7;Hanabi
+mesero7;Codenames
+mesero8;Codenames
+mesero8;Love Letter
+mesero8;Jenga
+mesero8;Twister
+mesero8;Kerplunk
+mesero8;Uno Stacko
+mesero9;Kerplunk
+mesero9;Uno Stacko
+mesero9;Dobble
+mesero9;7 Wonders
+mesero9;Agricola
+mesero9;Puerto Rico
+mesero9;Azul
+mesero10;Agricola
+mesero10;Puerto Rico
+mesero10;Azul
+mesero10;King of Tokyo
+mesero10;Catan
+mesero10;Carcassonne
+mesero10;Ticket to Ride
+mesero10;Pandemic

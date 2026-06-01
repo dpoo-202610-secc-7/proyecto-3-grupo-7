@@ -2,3 +2,23 @@ Uno;1971;Mattel;2;10;3;false;CARTAS
 Ajedrez;1475;Universal;2;2;6;true;TABLERO
 Twister;1966;Hasbro;2;6;5;false;ACCION
 Catan;1995;Kosmos;3;4;10;true;TABLERO
+Catan;2005;Kosmos;3;4;10;false;TABLERO
+Carcassonne;2000;Hans im Gluck;2;5;7;false;TABLERO
+Ticket to Ride;2004;Days of Wonder;2;5;8;false;TABLERO
+Pandemic;2008;Z-Man Games;2;4;8;true;TABLERO
+Dixit;2008;Libellud;3;6;6;false;CARTAS
+Coup;2012;Indie Boards;2;6;8;false;CARTAS
+Dominion;2008;Rio Grande;2;4;10;true;CARTAS
+Hanabi;2010;R&R Games;2;5;8;false;CARTAS
+Codenames;2015;Czech Games;2;8;10;false;CARTAS
+Love Letter;2012;Seiji Kanai;2;4;10;false;CARTAS
+Jenga;1983;Milton Bradley;2;8;6;false;ACCION
+Twister;1966;Milton Bradley;2;6;6;false;ACCION
+Kerplunk;1967;Ideal;2;4;5;false;ACCION
+Uno Stacko;1999;Mattel;2;10;6;false;ACCION
+Dobble;2009;Asmodee;2;8;4;false;ACCION
+7 Wonders;2010;Repos Prod.;3;7;12;true;TABLERO
+Agricola;2007;Lookout Games;1;5;12;true;TABLERO
+Puerto Rico;2002;Alea;3;5;12;true;TABLERO
+Azul;2017;Plan B Games;2;4;8;false;TABLERO
+King of Tokyo;2011;iello;2;6;8;false;TABLERO

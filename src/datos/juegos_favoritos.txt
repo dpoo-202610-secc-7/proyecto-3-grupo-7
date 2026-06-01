@@ -1,0 +1,280 @@
+mesero1;Catan
+mesero2;Ticket to Ride
+mesero2;Pandemic
+mesero3;Dixit
+mesero3;Coup
+mesero3;Dominion
+mesero4;Dominion
+mesero5;Codenames
+mesero5;Love Letter
+mesero6;Jenga
+mesero6;Twister
+mesero6;Kerplunk
+mesero7;Kerplunk
+mesero8;Dobble
+mesero8;7 Wonders
+mesero9;Agricola
+mesero9;Puerto Rico
+mesero9;Azul
+mesero10;Azul
+cocinero1;Catan
+cocinero2;Coup
+cocinero2;Dominion
+cocinero3;Jenga
+cocinero4;7 Wonders
+cocinero4;Agricola
+cocinero5;Catan
+cliana1;Catan
+cliana1;Carcassonne
+cliluis2;Pandemic
+cliluis2;Dixit
+cliluis2;Coup
+climaria3;Dominion
+climaria3;Hanabi
+climaria3;Codenames
+climaria3;Love Letter
+clicarlos4;Love Letter
+clicarlos4;Jenga
+clisofia5;Kerplunk
+clisofia5;Uno Stacko
+clisofia5;Dobble
+clipedro6;7 Wonders
+clipedro6;Agricola
+clipedro6;Puerto Rico
+clipedro6;Azul
+clilaura7;Azul
+clilaura7;King of Tokyo
+cliandres8;Carcassonne
+cliandres8;Ticket to Ride
+cliandres8;Pandemic
+clivalent9;Dixit
+clivalent9;Coup
+clivalent9;Dominion
+clivalent9;Hanabi
+clijuan10;Hanabi
+clijuan10;Codenames
+cliisabel11;Jenga
+cliisabel11;Twister
+cliisabel11;Kerplunk
+climiguel12;Uno Stacko
+climiguel12;Dobble
+climiguel12;7 Wonders
+climiguel12;Agricola
+clidaniel13;Agricola
+clidaniel13;Puerto Rico
+clisebast14;King of Tokyo
+clisebast14;Catan
+clisebast14;Carcassonne
+clicamila15;Ticket to Ride
+clicamila15;Pandemic
+clicamila15;Dixit
+clicamila15;Coup
+clinicola16;Coup
+clinicola16;Dominion
+clialejan17;Codenames
+clialejan17;Love Letter
+clialejan17;Jenga
+clifelipe18;Twister
+clifelipe18;Kerplunk
+clifelipe18;Uno Stacko
+clifelipe18;Dobble
+cligabrie19;Dobble
+cligabrie19;7 Wonders
+clidiego20;Puerto Rico
+clidiego20;Azul
+clidiego20;King of Tokyo
+clinatali21;Catan
+clinatali21;Carcassonne
+clinatali21;Ticket to Ride
+clinatali21;Pandemic
+climateo22;Pandemic
+climateo22;Dixit
+clipaola23;Dominion
+clipaola23;Hanabi
+clipaola23;Codenames
+cliesteba24;Love Letter
+cliesteba24;Jenga
+cliesteba24;Twister
+cliesteba24;Kerplunk
+clijulian25;Kerplunk
+clijulian25;Uno Stacko
+cliricard26;7 Wonders
+cliricard26;Agricola
+cliricard26;Puerto Rico
+clilucia27;Azul
+clilucia27;King of Tokyo
+clilucia27;Catan
+clilucia27;Carcassonne
+cliandres28;Carcassonne
+cliandres28;Ticket to Ride
+clisara29;Dixit
+clisara29;Coup
+clisara29;Dominion
+climauric30;Hanabi
+climauric30;Codenames
+climauric30;Love Letter
+climauric30;Jenga
+climarian31;Jenga
+climarian31;Twister
+clialejan32;Uno Stacko
+clialejan32;Dobble
+clialejan32;7 Wonders
+clivalent33;Agricola
+clivalent33;Puerto Rico
+clivalent33;Azul
+clivalent33;King of Tokyo
+clidaniel34;King of Tokyo
+clidaniel34;Catan
+cliisabel35;Ticket to Ride
+cliisabel35;Pandemic
+cliisabel35;Dixit
+clisamuel36;Coup
+clisamuel36;Dominion
+clisamuel36;Hanabi
+clisamuel36;Codenames
+clisofia37;Codenames
+clisofia37;Love Letter
+clitomas38;Twister
+clitomas38;Kerplunk
+clitomas38;Uno Stacko
+cligabrie39;Dobble
+cligabrie39;7 Wonders
+cligabrie39;Agricola
+cligabrie39;Puerto Rico
+cliemmanu40;Puerto Rico
+cliemmanu40;Azul
+clivaleri41;Catan
+clivaleri41;Carcassonne
+clivaleri41;Ticket to Ride
+climatias42;Pandemic
+climatias42;Dixit
+climatias42;Coup
+climatias42;Dominion
+clicatali43;Dominion
+clicatali43;Hanabi
+clirodrig44;Love Letter
+clirodrig44;Jenga
+clirodrig44;Twister
+cliantone45;Kerplunk
+cliantone45;Uno Stacko
+cliantone45;Dobble
+cliantone45;7 Wonders
+cligonzal46;7 Wonders
+cligonzal46;Agricola
+cliconsta47;Azul
+cliconsta47;King of Tokyo
+cliconsta47;Catan
+clibenjam48;Carcassonne
+clibenjam48;Ticket to Ride
+clibenjam48;Pandemic
+clibenjam48;Dixit
+clifernan49;Dixit
+clifernan49;Coup
+clijoaqui50;Hanabi
+clijoaqui50;Codenames
+clijoaqui50;Love Letter
+clirenata51;Jenga
+clirenata51;Twister
+clirenata51;Kerplunk
+clirenata51;Uno Stacko
+clipablo52;Uno Stacko
+clipablo52;Dobble
+clielena53;Agricola
+clielena53;Puerto Rico
+clielena53;Azul
+clialbert54;King of Tokyo
+clialbert54;Catan
+clialbert54;Carcassonne
+clialbert54;Ticket to Ride
+climarcel55;Ticket to Ride
+climarcel55;Pandemic
+clihector56;Coup
+clihector56;Dominion
+clihector56;Hanabi
+cliadrian57;Codenames
+cliadrian57;Love Letter
+cliadrian57;Jenga
+cliadrian57;Twister
+clivictor58;Twister
+clivictor58;Kerplunk
+clidiana59;Dobble
+clidiana59;7 Wonders
+clidiana59;Agricola
+clijavier60;Puerto Rico
+clijavier60;Azul
+clijavier60;King of Tokyo
+clijavier60;Catan
+cligloria61;Catan
+cligloria61;Carcassonne
+clirobert62;Pandemic
+clirobert62;Dixit
+clirobert62;Coup
+clipatric63;Dominion
+clipatric63;Hanabi
+clipatric63;Codenames
+clipatric63;Love Letter
+clieduard64;Love Letter
+clieduard64;Jenga
+clicarmen65;Kerplunk
+clicarmen65;Uno Stacko
+clicarmen65;Dobble
+climario66;7 Wonders
+climario66;Agricola
+climario66;Puerto Rico
+climario66;Azul
+clibeatri67;Azul
+clibeatri67;King of Tokyo
+clifernan68;Carcassonne
+clifernan68;Ticket to Ride
+clifernan68;Pandemic
+cliclaudi69;Dixit
+cliclaudi69;Coup
+cliclaudi69;Dominion
+cliclaudi69;Hanabi
+cliarturo70;Hanabi
+cliarturo70;Codenames
+clisilvia71;Jenga
+clisilvia71;Twister
+clisilvia71;Kerplunk
+clijorge72;Uno Stacko
+clijorge72;Dobble
+clijorge72;7 Wonders
+clijorge72;Agricola
+climonica73;Agricola
+climonica73;Puerto Rico
+cliraul74;King of Tokyo
+cliraul74;Catan
+cliraul74;Carcassonne
+clicristi75;Ticket to Ride
+clicristi75;Pandemic
+clicristi75;Dixit
+clicristi75;Coup
+cliernest76;Coup
+cliernest76;Dominion
+cliyoland77;Codenames
+cliyoland77;Love Letter
+cliyoland77;Jenga
+cliarmand78;Twister
+cliarmand78;Kerplunk
+cliarmand78;Uno Stacko
+cliarmand78;Dobble
+cliingrid79;Dobble
+cliingrid79;7 Wonders
+clioswald80;Puerto Rico
+clioswald80;Azul
+clioswald80;King of Tokyo
+clizulma81;Catan
+clizulma81;Carcassonne
+clizulma81;Ticket to Ride
+clizulma81;Pandemic
+clihelga82;Pandemic
+clihelga82;Dixit
+clipilar83;Dominion
+clipilar83;Hanabi
+clipilar83;Codenames
+clinelson84;Love Letter
+clinelson84;Jenga
+clinelson84;Twister
+clinelson84;Kerplunk
+clixiomar85;Kerplunk
+clixiomar85;Uno Stacko
